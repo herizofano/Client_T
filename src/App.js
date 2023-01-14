@@ -9,7 +9,9 @@ import Layout from "view/layout";
 import Dashboard from "view/dashboard";
 import Products from "view/products";
 import Customers from "view/customers";
-
+import Transactions from "view/transactions";
+import Geography from "view/geography";
+import Overview from "view/overview";
 function App() {
   const mode = useSelector((state) => state.global.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
@@ -24,6 +26,11 @@ function App() {
               <Route path="/dashboard" element= { <Dashboard /> }/>
               <Route path="/products" element= { <Products /> }/>
               <Route path="/customers" element= { <Customers /> }/>
+              <Route path="/transactions" element= { <Transactions /> }/>
+              <Route path="/carte" element= { <Geography /> }/>
+              <Route path="/overview" element={ <Overview />} />
+
+
 
 
             </Route>
