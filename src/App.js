@@ -12,6 +12,10 @@ import Customers from "view/customers";
 import Transactions from "view/transactions";
 import Geography from "view/geography";
 import Overview from "view/overview";
+import Daily from "view/daily";
+import Monthly from "view/monthly";
+import Breakdown from "view/breakdown";
+
 function App() {
   const mode = useSelector((state) => state.global.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
@@ -29,6 +33,10 @@ function App() {
               <Route path="/transactions" element= { <Transactions /> }/>
               <Route path="/carte" element= { <Geography /> }/>
               <Route path="/overview" element={ <Overview />} />
+              <Route path="/journaliers" element={ <Daily />} />
+              <Route path="/mensuels" element={ <Monthly />} />
+              <Route path="/breakdown" element={ <Breakdown />} />
+
 
 
 
