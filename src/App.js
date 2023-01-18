@@ -15,6 +15,8 @@ import Overview from "view/overview";
 import Daily from "view/daily";
 import Monthly from "view/monthly";
 import Breakdown from "view/breakdown";
+import Admin from "view/admin";
+import Performance from "view/performance";
 
 function App() {
   const mode = useSelector((state) => state.global.mode);
@@ -36,6 +38,8 @@ function App() {
               <Route path="/journaliers" element={ <Daily />} />
               <Route path="/mensuels" element={ <Monthly />} />
               <Route path="/breakdown" element={ <Breakdown />} />
+              <Route path="/admin" element={ <Admin />} />
+              <Route path="/performances" element={ <Performance />} />
 
 
 
